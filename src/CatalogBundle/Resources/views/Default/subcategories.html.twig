@@ -1,0 +1,20 @@
+{% extends '@Catalog/base.html.twig' %}
+{% block title %}
+    -- SUB --{{ name }}
+{% endblock %}
+
+{% block subcategories %}
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="{{ path('catalog_homepage') }}" class="icon home"><span>Home</span></a></li>
+                <li><a href="{{ path('sonata_admin_dashboard') }}"><span>ADMIN</span></a></li>
+                {% for value in subcategoryName %}
+                    <li class="dropdown">
+                        <a href="{{ path('catalog_products', {'name': value}) }}">{{ value }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+{% endblock %}

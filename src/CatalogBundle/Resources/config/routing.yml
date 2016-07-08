@@ -1,0 +1,12 @@
+catalog_homepage:
+    path: /home
+    defaults: { _controller: CatalogBundle:Default:index }
+catalog_subcategories:
+    path: /category/{name}/subcategories
+    defaults: { _controller: CatalogBundle:Default:subcategories}
+catalog_products:
+    path: /subcategories/{name}/products
+    defaults: { _controller: CatalogBundle:Default:product}
+catalog_details:
+    path: /products/{name}/details
+    defaults: { _controller: CatalogBundle:Default:detailProduct}

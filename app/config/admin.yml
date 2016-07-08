@@ -1,0 +1,19 @@
+# Sonata block configuration
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        sonata.block.service.text:
+        sonata.block.service.action:
+        sonata.block.service.rss:
+
+sonata_admin:
+    title: BACK OFFICE
+    title_logo: /bundles/sonataadmin/logo_title.png
+    templates:
+        # default global templates
+        layout: SonataAdminBundle::standard_layout.html.twig
+        ajax: SonataAdminBundle::ajax_layout.html.twig
+        dashboard: SonataAdminBundle:Core:dashboard.html.twig
+        knp_menu_template: ApplicationAdminBundle:Menu:custom_knp_menu.html.twig

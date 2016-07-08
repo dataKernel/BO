@@ -1,0 +1,22 @@
+{% extends '@Catalog/base.html.twig' %}
+{% block title %}
+    -- DETAILS --{{ name }}
+{% endblock %}
+
+{% block details %}
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="{{ path('catalog_homepage') }}" class="icon home"><span>Home</span></a></li>
+                <li><a href="{{ path('sonata_admin_dashboard') }}"><span>ADMIN</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <p class="bg-info">
+        <b style="font-weight: bolder">NAME:</b> {{ detailProduct.name }}<br>
+        <b style="font-weight: bolder">DESCRIPTION:</b> {{ detailProduct.description }}<br>
+        <b style="font-weight: bolder">PRICE:</b> {{ detailProduct.price }}<br>
+        <b style="font-weight: bolder">SUBCATEGORY NAME:</b> {{ detailProduct.subcategory.name }} <br>
+    </p>
+{% endblock %}
+

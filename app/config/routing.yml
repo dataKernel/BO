@@ -1,0 +1,17 @@
+catalog:
+    resource: "@CatalogBundle/Resources/config/routing.yml"
+    prefix:   /catalog
+
+#AdminBundle routing resource
+admin_bundle:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+#SonataAdminBundle routing resource
+admin_area:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix: /admin
+#Sonata generating routing for Admin class
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
